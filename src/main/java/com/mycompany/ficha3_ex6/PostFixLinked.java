@@ -9,12 +9,11 @@ package com.mycompany.ficha3_ex6;
  *
  * @author vitor
  */
-public class PostFix {
+public class PostFixLinked {
+     private LinkedStack<Double> calc;
 
-    private ArrayStack<Double> calc;
-
-    public PostFix() {
-        this.calc = new ArrayStack<>();
+    public PostFixLinked() {
+        this.calc = new LinkedStack<>();
     }
 
     public Double calcular(String texto) throws EmptyCollectionException {
@@ -26,7 +25,7 @@ public class PostFix {
                 case "+":
                     if (calc.size() < 2) {
                         System.out.println("Nao tem 2 elementos");
-                        return 3.2;
+                        return null;
                     } else {
                         double numero1 = calc.pop();
                         double numero2 = calc.pop();
@@ -90,5 +89,4 @@ public class PostFix {
             return false;
         }
     }
-
 }

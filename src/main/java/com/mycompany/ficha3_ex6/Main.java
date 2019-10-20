@@ -29,6 +29,17 @@ public class Main {
         } catch (EmptyCollectionException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        PostFixLinked c2 = new PostFixLinked();
+        try {
+            System.out.println(c2.calcular("4 2 /"));
+            System.out.println(c2.calcular("3 4 + 2 *"));
+            System.out.println(c2.calcular("3 + + 2 *"));
+            System.out.println(c2.calcular("7 4 -3 * 1 5 + / *"));
+
+        } catch (EmptyCollectionException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
